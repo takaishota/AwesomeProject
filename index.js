@@ -1,6 +1,7 @@
 // @flow
 
-import { AppRegistry } from 'react-native';
-import App from './App';
+import { AppRegistry } from "react-native";
+import setup from "./js/setup";
 
-AppRegistry.registerComponent('AwesomeProject', () => App);
+console.ignoredYellowBox = ['Remote debugger'];
+AppRegistry.registerComponent("AwesomeProject", setup);

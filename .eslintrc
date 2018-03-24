@@ -9,6 +9,10 @@
     "react/sort-comp": ["off"],
     "react/prefer-stateless-function": ["off"],
     "no-use-before-define": ["off"],
-    "no-useless-concat": ["off"]
+    "no-useless-concat": ["off"],
+    "import/extensions": ["off"],
+    "import/no-unresolved": ["off"],
+    "quotes": [1, "double", "avoid-escape"],
+    "react/prop-types": ["off"]
   }
 }
