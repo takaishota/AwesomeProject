@@ -15,6 +15,10 @@
     "quotes": ["off"],
     "react/prop-types": ["off"],
     "react/no-string-refs": ["off"],
-    "global-require": ["off"]
+    "global-require": ["off"],
+    "no-undefined": ["off"]
+  },
+  "env": {
+    "browser": true
   }
 }

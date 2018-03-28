@@ -1,12 +1,11 @@
 import { combineReducers } from "redux";
-
-import { DATA_AVAILABLE } from "../actions/"; // Import the actions types constant we defined in our actions
+import * as types from "../actions/actionTypes";
 
 const dataState = { data: [], loading: true };
 
 const dataReducer = (state = dataState, action) => {
   switch (action.type) {
-    case DATA_AVAILABLE:
+    case types.RECEIVE_HELTH_NEWS:
       return Object.assign({}, state, { data: action.data, loading: false });
     default:
       return state;

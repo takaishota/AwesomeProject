@@ -1,0 +1,2 @@
+export const RECEIVE_HELTH_NEWS = "RECEIVE_HELTH_NEWS";
+export default "RECEIVE_HELTH_NEWS";

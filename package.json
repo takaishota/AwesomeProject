@@ -31,6 +31,7 @@
     "flow-bin": "^0.65.0",
     "jest": "22.4.2",
     "prettier": "1.11.1",
+    "react-native-dotenv": "^0.1.1",
     "react-test-renderer": "^16.3.0-alpha.1"
   },
   "jest": {

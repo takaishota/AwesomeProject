@@ -4,19 +4,18 @@ import { StyleSheet, FlatList, View, Text, ActivityIndicator } from "react-nativ
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
-import * as Actions from "../actions"; // Import your actions
+import * as Actions from "../actions";
 
 class Home extends Component {
   constructor(props) {
     super(props);
 
     this.state = {};
-
     this.renderItem = this.renderItem.bind(this);
   }
 
   componentDidMount() {
-    this.props.getData(); // call our action
+    this.props.fetchHelthNews();
   }
 
   render() {
@@ -39,24 +38,22 @@ class Home extends Component {
     );
   }
 
-  renderItem({ item, index }) {
-    return (
-      <View style={styles.row}>
-        <Text style={styles.title}>
-          {parseInt(index, 10) + 1}
-          {". "}
-          {item.title}
-        </Text>
-        <Text style={styles.description}>{item.description}</Text>
-      </View>
-    );
-  }
+  renderItem = ({ item, index }) => (
+    <View style={styles.row}>
+      <Text style={styles.title}>
+        {parseInt(index, 10) + 1}
+        {". "}
+        {item.title}
+      </Text>
+      <Text style={styles.description}>{item.description}</Text>
+    </View>
+  );
 }
 
 // The function takes data from the app current state,
 // and insert/links it into the props of our component.
 // This function makes Redux know that this component needs to be passed a piece of the state
-function mapStateToProps(state, props) {
+function mapStateToProps(state) {
   return {
     loading: state.dataReducer.loading,
     data: state.dataReducer.data,
