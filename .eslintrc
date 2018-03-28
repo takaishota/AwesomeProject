@@ -12,7 +12,7 @@
     "no-useless-concat": ["off"],
     "import/extensions": ["off"],
     "import/no-unresolved": ["off"],
-    "quotes": [1, "double", "avoid-escape"],
+    "quotes": ["off"],
     "react/prop-types": ["off"],
     "react/no-string-refs": ["off"],
     "global-require": ["off"]
